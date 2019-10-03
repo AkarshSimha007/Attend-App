@@ -144,7 +144,7 @@ img {
         <br>
 
 
- <form >
+ <form name="loginform" onSubmit="return validateForm();" action="new.html" method="post">
     <input type="text" name="E-mail" placeholder="E-mail" >
     <br>
     <input type="password" name="Password" placeholder="Password">
@@ -171,6 +171,10 @@ function toggleModal() {
 function windowOnClick(event) {
     if (event.target === modal) {
         toggleModal();
+sessionStorage.setItem("ok","true");
+setTimeout(function()
+{
+  location.href="open.html";},5000)
     }
 }
 
@@ -180,12 +184,21 @@ window.addEventListener("click", windowOnClick);
 
 
 
-sessionStorage.setItem("ok","true");
-setTimeout(function()
-{
-  location.href="open.html";},5000)
 
 
+function validateForm() {
+        var un = document.loginform.E-mail.value;
+        var pw = document.loginform.Password.value;
+        var username = "username"; 
+        var password = "password";
+        if ((un == akarsh) && (pw == simha)) {
+            return true;
+        }
+        else {
+            alert ("Login was unsuccessful, please check your username and password");
+            return false;
+        }
+  }
 
 </script>
 
