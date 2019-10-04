@@ -10,11 +10,6 @@ body, html {
   height: 100%;
   margin: 0;
 }
-
-
-
-
-
    .center  {
       width: 200px;
       height: 220px;
@@ -26,7 +21,6 @@ body, html {
       padding-left:30px;
       padding-right:30px;
    }
-
  input[type=text] {
   width: 100%;
   padding: 5px 2px;
@@ -38,13 +32,10 @@ body, html {
 input[type=password] {
   width: 100%;
   padding:5px 2px;
-
-
   box-sizing: border-box;
   border: 2px solid blue;
   border-radius: 10px;
 }
-
 img {
       display: block;
       margin-left: auto;
@@ -59,7 +50,6 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .button
 {
     cursor: pointer;
@@ -82,7 +72,6 @@ img {
 {
   background: #c2c2a3;
 }
-
 .modal {
     position: fixed;
     left: 0;
@@ -123,10 +112,6 @@ img {
     transform: scale(1.0);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
-
-
-
-
 </style>
 </head>
 
@@ -163,7 +148,6 @@ img {
     var modal = document.querySelector(".modal");
 var trigger = document.querySelector(".button");
 var closeButton = document.querySelector(".close-button");
-
 function toggleModal() {
     modal.classList.toggle("show-modal");
 }
@@ -171,24 +155,23 @@ function toggleModal() {
 function windowOnClick(event) {
     if (event.target === modal) {
         toggleModal();
+}
+}
 trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
-sessionStorage.setItem("ok","true");
-setTimeout(function()
-{
-  location.href="open.html";},5000)
-
-
-
-
 
 function validateForm() {
         var un = document.loginform.E-mail.value;
         var pw = document.loginform.Password.value;
-        var username = "akarsh"; 
-        var password = "simha";
-        if ((un == username) && (pw == password)) {
+        var username = "username"; 
+        var password = "password";
+        if ((un == akarsh) && (pw == simha)) {
+		sessionStorage.setItem("ok","true");
+setTimeout(function()
+{
+  location.href="new.html";},5000)
+
             return true;
         }
         else {
@@ -196,7 +179,6 @@ function validateForm() {
             return false;
         }
   }
-
 </script>
 
 </body>

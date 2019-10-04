@@ -181,8 +181,9 @@ window.addEventListener("click", windowOnClick);
 
 
 sessionStorage.setItem("ok","true");
-
-  location.href="open.html";
+setTimeout(function()
+{
+  location.href="open.html";},5000)
 
 
 
